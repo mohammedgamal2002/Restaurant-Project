@@ -18,9 +18,9 @@ namespace Data_Structures
         private bool DrinksMenuIsClosed = true;
         private bool DessertMenuIsClosed = true;
 
-        private FoodForm foodForm;
-        private DrinksForm drinksForm;
-        private DessertForm dessertForm;
+        internal static FoodForm foodForm;
+        internal static DrinksForm drinksForm;
+        internal static DessertForm dessertForm;
 
         public MainForm()
         {

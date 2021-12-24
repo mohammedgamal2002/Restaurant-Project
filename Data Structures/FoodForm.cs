@@ -20,8 +20,6 @@ namespace Data_Structures
             InitializeComponent();
 
         }
-
-
         private void ShowFood()
         {
             foreach (Food food in foodList)
@@ -56,6 +54,7 @@ namespace Data_Structures
                 flowLayoutPanel1.Controls.Add(panel);
             }
         }
+
 
         public static void SaveFoodMenu()
         {

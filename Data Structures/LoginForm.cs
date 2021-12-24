@@ -25,19 +25,21 @@ namespace Data_Structures
                 {
                     AdminForm admin = new AdminForm();
                     admin.Show();
+                    this.Close();
                 }
             }
         }
         private void usernameTextBox_Enter(object sender, EventArgs e)
         {
             userIcon.IconColor = Color.Black;
+            ChangeBackColor();
 
 
 
         }
         private void usernameTextBox_Leave(object sender, EventArgs e)
         {
-            userIcon.IconColor = Color.FromArgb(204, 156, 35);
+            userIcon.IconColor = Color.FromArgb(163, 120, 8);
 
 
         }
@@ -48,21 +50,21 @@ namespace Data_Structures
         {
             passwordIcon.IconColor = Color.Black;
             passwordIcon.IconChar = FontAwesome.Sharp.IconChar.Unlock;
+            ChangeBackColor();
 
         }
 
         private void passwordTextBox_Leave(object sender, EventArgs e)
         {
-            passwordIcon.IconColor = Color.FromArgb(204, 156, 35);
+            passwordIcon.IconColor = Color.FromArgb(163, 120, 8);
             passwordIcon.IconChar = FontAwesome.Sharp.IconChar.Lock;
 
 
         }
-
-        private void panel1_Enter(object sender, EventArgs e)
-        {
+        private void ChangeBackColor() {
             this.BackColor = Color.FromArgb(46, 45, 45);
-            panel1.BackColor = Color.FromArgb(204, 156, 35);
+            loginPanel.BackColor = Color.FromArgb(230, 173, 30);
+            loginButton.BackColor = Color.FromArgb(54, 53, 50);
         }
     }
 }

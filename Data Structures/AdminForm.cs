@@ -13,6 +13,7 @@ namespace Data_Structures
     public partial class AdminForm : Form
     {
         string img;
+        string Type;
 
         public AdminForm()
         {
@@ -21,44 +22,63 @@ namespace Data_Structures
 
         private void button1_Click(object sender, EventArgs e)
         {
-            try
+            if (nameTextBox.Text == "" || priceTextBox.Text == "" || descriptionTextBox.Text == "")
+
+            if (nameTextBox.Text == "") {
+                MessageBox.Show("Enter a name");
+            }
+            if (priceTextBox.Text == "")
             {
-                if (menuType.Text == "Food")
+                MessageBox.Show("Enter a price");
+
+            }
+            if (descriptionTextBox.Text == "")
+            {
+                MessageBox.Show("Enter a description");
+            }
+            if (img == null)
+            {
+                MessageBox.Show("Choose an image");
+
+            }
+            else
+            {
+                try
                 {
-                    FoodForm.AddFood(nameTextBox.Text, descriptionTextBox.Text, (int.Parse(priceTextBox.Text)), img);
-                    MessageBox.Show("Added!");
+                    if (Type == "Food")
+                    {
+                        FoodForm.AddFood(nameTextBox.Text, descriptionTextBox.Text, (int.Parse(priceTextBox.Text)), img);
+                        MessageBox.Show("Added!");
+                        MainForm.foodForm.Update();
+                    }
+                    else if (Type == "Drinks")
+                    {
+                        DrinksForm.AddDrinks(nameTextBox.Text, descriptionTextBox.Text, (int.Parse(priceTextBox.Text)), img);
+                        MessageBox.Show("Added!");
+                        MainForm.drinksForm.Update();
+                    }
+
+                    else if (Type == "Desserts")
+                    {
+                        DessertForm.AddDessert(nameTextBox.Text, descriptionTextBox.Text, (int.Parse(priceTextBox.Text)), img);
+                        MessageBox.Show("Added!");
+                        MainForm.dessertForm.Update();
+                    }
+                    else
+                        MessageBox.Show("Choose a type");
                 }
-                else if (menuType.Text == "Drinks")
+                catch (System.FormatException)
                 {
-                    DrinksForm.AddDrinks(nameTextBox.Text, descriptionTextBox.Text, (int.Parse(priceTextBox.Text)), img);
-                    MessageBox.Show("Added!");
+
+                    MessageBox.Show("Error : Invalid inputs");
                 }
 
-                else if (menuType.Text == "Desserts")
-                {
-                    DessertForm.AddDessert(nameTextBox.Text, descriptionTextBox.Text, (int.Parse(priceTextBox.Text)), img);
-                    MessageBox.Show("Added!");
-                }
-                else
-                    MessageBox.Show("Choose a type");
-            }
-            catch (System.FormatException)
-            {
 
-                MessageBox.Show("Error : Invalid inputs");
             }
+
 
 
         }
-
-        //private void textBox2_Click(object sender, EventArgs e)
-        //{
-        //    OpenFileDialog ofd = new OpenFileDialog();
-        //    if (ofd.ShowDialog() == DialogResult.OK)
-        //    {
-        //       img = ofd.FileName;
-        //    }
-        //}
 
         private void SaveButton_Click(object sender, EventArgs e)
         {
@@ -67,42 +87,8 @@ namespace Data_Structures
             DessertForm.SaveDessertMenu();
         }
 
-        private void nameTextBox_TextChanged(object sender, EventArgs e)
-        {
 
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void priceTextBox_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void imgTextBox_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void imgTextBox_Click(object sender, EventArgs e)
+        private void AddImg_Click(object sender, EventArgs e)
         {
             OpenFileDialog ofd = new OpenFileDialog();
             if (ofd.ShowDialog() == DialogResult.OK)
@@ -113,13 +99,21 @@ namespace Data_Structures
 
         }
 
-        private void iconPictureBox2_Click(object sender, EventArgs e)
+        private void AddFoodButton_Click(object sender, EventArgs e)
         {
+            Type = "Food";
+            
+        }
+
+        private void AddDrinkButton_Click(object sender, EventArgs e)
+        {
+            Type = "Drinks";
 
         }
 
-        private void menuType_SelectedIndexChanged(object sender, EventArgs e)
+        private void AddDessertButton_Click(object sender, EventArgs e)
         {
+            Type = "Desserts";
 
         }
     }
