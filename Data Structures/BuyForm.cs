@@ -15,13 +15,15 @@ namespace Data_Structures
         string name;
         string type;
         int price;
-        public BuyForm(string name, string type, int price)
+        PictureBox picture;
+        public BuyForm(string name, string type, int price , PictureBox picture)
         {
 
             InitializeComponent();
             this.name = name;
             this.type = type;
             this.price = price;
+            this.picture = picture;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -39,6 +41,11 @@ namespace Data_Structures
         {
             this.Close();
 
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            
         }
     }
 }

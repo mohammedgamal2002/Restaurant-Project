@@ -129,7 +129,7 @@ namespace Data_Structures
             string name = foodList[index].foodName;
             string type = foodList[index].foodType;
             int price = foodList[index].foodPrice;
-            BuyForm buyForm = new BuyForm(name,type,price);
+            BuyForm buyForm = new BuyForm(name,type,price , picture);
             buyForm.Show();
         }
     }

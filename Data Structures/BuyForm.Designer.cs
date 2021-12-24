@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.nameLabel = new System.Windows.Forms.Label();
-            this.typeLabel = new System.Windows.Forms.Label();
-            this.priceLabel = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.priceLabel = new System.Windows.Forms.Label();
+            this.typeLabel = new System.Windows.Forms.Label();
+            this.nameLabel = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -52,42 +52,6 @@
             this.panel1.Size = new System.Drawing.Size(176, 226);
             this.panel1.TabIndex = 0;
             // 
-            // nameLabel
-            // 
-            this.nameLabel.BackColor = System.Drawing.Color.LightGray;
-            this.nameLabel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.nameLabel.Font = new System.Drawing.Font("Microsoft JhengHei Light", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nameLabel.Location = new System.Drawing.Point(0, 0);
-            this.nameLabel.Name = "nameLabel";
-            this.nameLabel.Size = new System.Drawing.Size(176, 50);
-            this.nameLabel.TabIndex = 8;
-            this.nameLabel.Text = "Name: ";
-            this.nameLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // typeLabel
-            // 
-            this.typeLabel.BackColor = System.Drawing.Color.LightGray;
-            this.typeLabel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.typeLabel.Font = new System.Drawing.Font("Microsoft JhengHei Light", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.typeLabel.Location = new System.Drawing.Point(0, 50);
-            this.typeLabel.Name = "typeLabel";
-            this.typeLabel.Size = new System.Drawing.Size(176, 50);
-            this.typeLabel.TabIndex = 9;
-            this.typeLabel.Text = "Type: ";
-            this.typeLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // priceLabel
-            // 
-            this.priceLabel.BackColor = System.Drawing.Color.LightGray;
-            this.priceLabel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.priceLabel.Font = new System.Drawing.Font("Microsoft JhengHei Light", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.priceLabel.Location = new System.Drawing.Point(0, 100);
-            this.priceLabel.Name = "priceLabel";
-            this.priceLabel.Size = new System.Drawing.Size(176, 50);
-            this.priceLabel.TabIndex = 10;
-            this.priceLabel.Text = "Price: ";
-            this.priceLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // panel2
             // 
             this.panel2.Controls.Add(this.button2);
@@ -97,20 +61,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(176, 76);
             this.panel2.TabIndex = 11;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.Salmon;
-            this.button1.Location = new System.Drawing.Point(0, 0);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(88, 76);
-            this.button1.TabIndex = 12;
-            this.button1.Text = "Buy";
-            this.button1.UseVisualStyleBackColor = false;
             // 
             // button2
             // 
@@ -126,6 +76,57 @@
             this.button2.Text = "Cancel";
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.button1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.Salmon;
+            this.button1.Location = new System.Drawing.Point(0, 0);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(88, 76);
+            this.button1.TabIndex = 12;
+            this.button1.Text = "Buy";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
+            // priceLabel
+            // 
+            this.priceLabel.BackColor = System.Drawing.Color.LightGray;
+            this.priceLabel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.priceLabel.Font = new System.Drawing.Font("Microsoft JhengHei Light", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.priceLabel.Location = new System.Drawing.Point(0, 100);
+            this.priceLabel.Name = "priceLabel";
+            this.priceLabel.Size = new System.Drawing.Size(176, 50);
+            this.priceLabel.TabIndex = 10;
+            this.priceLabel.Text = "Price: ";
+            this.priceLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // typeLabel
+            // 
+            this.typeLabel.BackColor = System.Drawing.Color.LightGray;
+            this.typeLabel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.typeLabel.Font = new System.Drawing.Font("Microsoft JhengHei Light", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.typeLabel.Location = new System.Drawing.Point(0, 50);
+            this.typeLabel.Name = "typeLabel";
+            this.typeLabel.Size = new System.Drawing.Size(176, 50);
+            this.typeLabel.TabIndex = 9;
+            this.typeLabel.Text = "Type: ";
+            this.typeLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // nameLabel
+            // 
+            this.nameLabel.BackColor = System.Drawing.Color.LightGray;
+            this.nameLabel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.nameLabel.Font = new System.Drawing.Font("Microsoft JhengHei Light", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nameLabel.Location = new System.Drawing.Point(0, 0);
+            this.nameLabel.Name = "nameLabel";
+            this.nameLabel.Size = new System.Drawing.Size(176, 50);
+            this.nameLabel.TabIndex = 8;
+            this.nameLabel.Text = "Name: ";
+            this.nameLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // BuyForm
             // 

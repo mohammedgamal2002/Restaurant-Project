@@ -120,7 +120,7 @@
             this.loginButton.Dock = System.Windows.Forms.DockStyle.Fill;
             this.loginButton.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.loginButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.loginButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.loginButton.ForeColor = System.Drawing.Color.Black;
             this.loginButton.Location = new System.Drawing.Point(0, 0);
             this.loginButton.Name = "loginButton";
             this.loginButton.Size = new System.Drawing.Size(97, 25);
