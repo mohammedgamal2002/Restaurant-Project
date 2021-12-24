@@ -75,25 +75,34 @@ namespace Data_Structures
         public static void LoadDessertMenu()
         {
 
-            using (var MenuReader = new StreamReader("Dessert_Menu.txt"))
+            try
             {
-                string dessertName;
-                string dessertType;
-                int price;
-                string dessertPic;
-                dessertName = MenuReader.ReadLine();
-                while (dessertName != null)
+                using (var MenuReader = new StreamReader("Dessert_Menu.txt"))
                 {
-                    dessertType = MenuReader.ReadLine();
-                    price = int.Parse(MenuReader.ReadLine());
-                    dessertPic = MenuReader.ReadLine();
-
-                    dessertList.Add(new Dessert(dessertName, dessertType, price, dessertPic));
-
+                    string dessertName;
+                    string dessertType;
+                    int price;
+                    string dessertPic;
                     dessertName = MenuReader.ReadLine();
+                    while (dessertName != null)
+                    {
+                        dessertType = MenuReader.ReadLine();
+                        price = int.Parse(MenuReader.ReadLine());
+                        dessertPic = MenuReader.ReadLine();
+
+                        dessertList.Add(new Dessert(dessertName, dessertType, price, dessertPic));
+
+                        dessertName = MenuReader.ReadLine();
+
+                    }
 
                 }
+            }
+            catch (FileNotFoundException)
+            {
 
+                using (var MenuWriter = new StreamWriter("Dessert_Menu.txt", false)) { }
+                
             }
 
         }

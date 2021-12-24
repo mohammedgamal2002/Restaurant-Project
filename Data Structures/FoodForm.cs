@@ -74,6 +74,8 @@ namespace Data_Structures
         public static void LoadFoodMenu()
         {
 
+            try
+            {
                 using (var MenuReader = new StreamReader("Food_Menu.txt"))
                 {
                     string foodName;
@@ -93,7 +95,15 @@ namespace Data_Structures
 
                     }
 
+                }
             }
+            catch (FileNotFoundException)
+            {
+
+                using (var MenuWriter = new StreamWriter("Food_Menu.txt", false))
+                { }
+            }
+
 
         }
 
