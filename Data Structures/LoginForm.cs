@@ -65,6 +65,7 @@ namespace Data_Structures
             this.BackColor = Color.FromArgb(46, 45, 45);
             loginPanel.BackColor = Color.FromArgb(230, 173, 30);
             loginButton.BackColor = Color.FromArgb(54, 53, 50);
+            loginButton.ForeColor = Color.White;
         }
     }
 }

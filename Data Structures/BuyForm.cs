@@ -12,18 +12,19 @@ namespace Data_Structures
 {
     public partial class BuyForm : Form
     {
+       
         string name;
         string type;
         int price;
-        PictureBox picture;
-        public BuyForm(string name, string type, int price , PictureBox picture)
+        string pictureURL;
+        public BuyForm(string name, string type, int price,string pictureURL)
         {
 
             InitializeComponent();
             this.name = name;
             this.type = type;
             this.price = price;
-            this.picture = picture;
+            this.pictureURL = pictureURL;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -35,6 +36,7 @@ namespace Data_Structures
             nameLabel.Text += name;
             typeLabel.Text += type;
             priceLabel.Text += price;
+            
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -43,9 +45,12 @@ namespace Data_Structures
 
         }
 
-        private void button1_Click_1(object sender, EventArgs e)
+        private void Buy_Click(object sender, EventArgs e)
         {
-            
+            MainForm.orderForm.Update();
+            OrderForm order = new OrderForm(name, price, type, pictureURL);
+
+            this.Close();
         }
     }
 }

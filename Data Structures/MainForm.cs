@@ -17,10 +17,12 @@ namespace Data_Structures
         private bool FoodMenuIsClosed = true;
         private bool DrinksMenuIsClosed = true;
         private bool DessertMenuIsClosed = true;
+        private bool OrderFormIsClosed = true;
 
         internal static FoodForm foodForm;
         internal static DrinksForm drinksForm;
         internal static DessertForm dessertForm;
+        internal static OrderForm orderForm;
 
         public MainForm()
         {
@@ -32,10 +34,31 @@ namespace Data_Structures
             FoodForm.LoadFoodMenu();
             DrinksForm.LoadDrinksMenu();
             DessertForm.LoadDessertMenu();
+            
 
             MakeFoodForm();
             MakeDrinksForm();
             MakeDessertForm();
+            MakeOrderForm();
+
+        }
+
+        private void MakeOrderForm()
+        {
+            orderForm = new OrderForm();
+            orderForm.TopLevel = false;
+            panel2.Controls.Add(orderForm);
+            orderForm.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            orderForm.Dock = DockStyle.Fill;
+
+
+        }
+        private void HideOrderForm()
+        {
+
+            orderForm.Hide();
+            OrderFormIsClosed = true;
+
 
         }
 
@@ -129,6 +152,8 @@ namespace Data_Structures
                     foodForm.Show();
                     HideDrinksForm();
                     HideDessertForm();
+                    HideOrderForm();
+
                     FoodMenuIsClosed = false;
 
                 }
@@ -141,6 +166,8 @@ namespace Data_Structures
                 StyleIcon(FoodMenu);
                     UnStyleIcon(drinksFormButton);
                     UnStyleIcon(dessertMenu);
+                    UnStyleIcon(ordersButton);
+
 
             }
             else if (iconButton.Text == "Drinks") {
@@ -150,6 +177,8 @@ namespace Data_Structures
                     drinksForm.Show();
                     HideFoodForm();
                     HideDessertForm();
+                    HideOrderForm();
+
                     DrinksMenuIsClosed = false;
 
 
@@ -164,14 +193,18 @@ namespace Data_Structures
                 StyleIcon(drinksFormButton);
                 UnStyleIcon(FoodMenu);
                 UnStyleIcon(dessertMenu);
+                UnStyleIcon(ordersButton);
+
             }
-            
+
             else if (iconButton.Text == "Desserts"){
                 if (DessertMenuIsClosed)
                 {
                     dessertForm.Show();
                     HideDrinksForm();
                     HideFoodForm();
+                    HideOrderForm();
+
                     DessertMenuIsClosed = false;
 
                 }
@@ -183,6 +216,32 @@ namespace Data_Structures
                 StyleIcon(dessertMenu);
                 UnStyleIcon(drinksFormButton);
                 UnStyleIcon(FoodMenu);
+                UnStyleIcon(dessertMenu);
+                UnStyleIcon(ordersButton);
+
+
+            }
+            else if (iconButton.Text == "My Orders")
+            {
+                if (OrderFormIsClosed)
+                {
+                    orderForm.Show();
+                    HideDrinksForm();
+                    HideFoodForm();
+                    HideDessertForm();
+                    OrderFormIsClosed = false;
+
+                }
+
+                else
+                {
+                    HideOrderForm();
+                }
+                StyleIcon(ordersButton);
+                UnStyleIcon(drinksFormButton);
+                UnStyleIcon(FoodMenu);
+                UnStyleIcon(dessertMenu);
+
             }
         }
 

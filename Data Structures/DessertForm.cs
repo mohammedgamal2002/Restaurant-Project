@@ -130,7 +130,8 @@ namespace Data_Structures
             string name = dessertList[index].dessertName;
             string type = dessertList[index].dessertType;
             int price = dessertList[index].dessertPrice;
-            BuyForm buyForm = new BuyForm(name, type, price, picture);
+            string pictureURL = dessertList[index].dessertPic;
+            BuyForm buyForm = new BuyForm(name, type, price, pictureURL);
             buyForm.Show();
         }
     }
