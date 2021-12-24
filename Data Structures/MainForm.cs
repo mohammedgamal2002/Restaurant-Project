@@ -188,8 +188,8 @@ namespace Data_Structures
 
         private void Admin_Click(object sender, EventArgs e)
         {
-            AdminForm adminForm = new AdminForm();
-            adminForm.Show();
+            LoginForm loginForm = new LoginForm();
+            loginForm.Show();
 
         }
 
