@@ -62,7 +62,7 @@ namespace Data_Structures
             string name = drinksList[index].drinksName;
             string type = drinksList[index].drinksType;
             int price = drinksList[index].drinksPrice;
-            BuyForm buyForm = new BuyForm(name, type, price);
+            BuyForm buyForm = new BuyForm(name, type, price, picture);
             buyForm.Show();
         }
 
