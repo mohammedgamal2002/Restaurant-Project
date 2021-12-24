@@ -51,6 +51,7 @@
             this.Name = "DessertForm";
             this.Text = "DessertForm";
             this.Load += new System.EventHandler(this.DessertForm_Load);
+            this.VisibleChanged += new System.EventHandler(this.DessertForm_VisibleChanged);
             this.ResumeLayout(false);
 
         }

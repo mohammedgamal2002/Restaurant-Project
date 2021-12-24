@@ -52,6 +52,7 @@
             this.Name = "DrinksForm";
             this.Text = "DrinksForm";
             this.Load += new System.EventHandler(this.drinksForm_Load);
+            this.VisibleChanged += new System.EventHandler(this.DrinksForm_VisibleChanged);
             this.ResumeLayout(false);
 
         }

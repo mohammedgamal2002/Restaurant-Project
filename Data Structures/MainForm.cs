@@ -19,10 +19,10 @@ namespace Data_Structures
         private bool DessertMenuIsClosed = true;
         private bool OrderFormIsClosed = true;
 
-        internal static FoodForm foodForm;
-        internal static DrinksForm drinksForm;
-        internal static DessertForm dessertForm;
-        internal static OrderForm orderForm;
+        private FoodForm foodForm;
+        private DrinksForm drinksForm;
+        private DessertForm dessertForm;
+        private OrderForm orderForm;
 
         public MainForm()
         {
@@ -215,9 +215,7 @@ namespace Data_Structures
                 }
                 StyleIcon(dessertMenu);
                 UnStyleIcon(drinksFormButton);
-                UnStyleIcon(FoodMenu);
-                UnStyleIcon(dessertMenu);
-                UnStyleIcon(ordersButton);
+                UnStyleIcon(FoodMenu);                UnStyleIcon(ordersButton);
 
 
             }

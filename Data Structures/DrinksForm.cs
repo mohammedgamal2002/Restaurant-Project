@@ -15,7 +15,7 @@ namespace Data_Structures
     {
 
         public static DynamicArray<Drinks> drinksList = new DynamicArray<Drinks>();
-
+        private int shown = 0;
         public DrinksForm()
         {
             InitializeComponent();
@@ -24,34 +24,39 @@ namespace Data_Structures
 
         private void ShowDrinks()
         {
-            foreach (Drinks drinks in drinksList)
+            for (int i = shown; i < drinksList.Count; i++)
             {
+                Drinks drink = drinksList[i];
+
                 Panel panel = new Panel();
                 panel.Margin = new System.Windows.Forms.Padding(10, 10, 20, 20);
                 panel.Size = new System.Drawing.Size(240, 205);
 
 
-                Label drinksName = new Label();
-                drinksName.Size = new Size(240, 29);
-                drinksName.Dock = DockStyle.Bottom;
-                drinksName.ForeColor = Color.FromArgb(214, 155, 15);
-                drinksName.Text = drinks.drinksName;
-                drinksName.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-                drinksName.Font = new System.Drawing.Font("Monotype Corsiva", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-                drinksName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-                drinksName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+                Label drinkName = new Label();
+                drinkName.Size = new Size(240, 29);
+                drinkName.Dock = DockStyle.Bottom;
+                drinkName.ForeColor = Color.FromArgb(214, 155, 15);
+                drinkName.Text = drink.drinksName;
+                drinkName.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+                drinkName.Font = new System.Drawing.Font("Monotype Corsiva", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+                drinkName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+                drinkName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+
 
                 PictureBox picture = new PictureBox();
                 picture.Dock = DockStyle.Fill;
                 picture.BackColor = Color.White;
-                picture.LoadAsync(drinks.drinksPic);
+                picture.LoadAsync(drink.drinksPic);
                 picture.SizeMode = PictureBoxSizeMode.StretchImage;
                 picture.Click += new System.EventHandler(drinks_Click);
 
-                panel.Controls.Add(drinksName);
+                panel.Controls.Add(drinkName);
                 panel.Controls.Add(picture);
 
+
                 flowLayoutPanel1.Controls.Add(panel);
+                shown = i + 1;
             }
         }
 
@@ -129,6 +134,10 @@ namespace Data_Structures
 
         }
 
+        private void DrinksForm_VisibleChanged(object sender, EventArgs e)
+        {
+            ShowDrinks();
+        }
     }
     public class Drinks
     {

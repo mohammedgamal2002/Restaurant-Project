@@ -13,7 +13,7 @@ namespace Data_Structures
     public partial class OrderForm : Form
     {
         public static DynamicArray<Order> orderList = new DynamicArray<Order>();
-        int totalPrice;
+        private int shown = 0;
         public OrderForm()
         {
             InitializeComponent();
@@ -21,17 +21,17 @@ namespace Data_Structures
         public OrderForm(string name,int price,string type,string picture)
         {
             InitializeComponent();
-
-            orderList.Add(new Order(name, price, type, picture));
+            Order newOrder = new Order(name, price, type, picture);
+            orderList.Add(newOrder);
 
         }
 
-
-
         private void ShowOrder()
         {
-            foreach (Order order in orderList)
+            for(int i = shown; i < orderList.Count; i++)
             {
+                Order order = orderList[i];
+                
                 Panel panel = new Panel();
                 panel.Margin = new System.Windows.Forms.Padding(10, 10, 20, 20);
                 panel.Size = new System.Drawing.Size(240, 205);
@@ -60,17 +60,10 @@ namespace Data_Structures
 
 
                 flowLayoutPanel1.Controls.Add(panel);
+                shown = i + 1;
             }
         }
 
-        private void GetPrice()
-        {
-            totalPrice = 0;
-            foreach(Order order in orderList )
-            {
-                totalPrice += order.orderPrice;
-            }
-        }
         private void orderForm_Load(object sender, EventArgs e)
         {
             ShowOrder();
@@ -83,6 +76,7 @@ namespace Data_Structures
             public string orderType { get; set; }
             public int orderPrice { get; set; }
             public string orderPictureURL;
+            public static int totalPrice = 0;
 
             public Order(string orderName,int orderprice, string orderType, string orderPictureURL)
             {
@@ -90,19 +84,18 @@ namespace Data_Structures
                 this.orderPrice = orderprice;
                 this.orderType = orderType;
                 this.orderPictureURL = orderPictureURL;
+                totalPrice += orderprice;
             }
 
         }
 
-        private void totalPricebtn_Click(object sender, EventArgs e)
-        {
 
-        }
 
-        private void OrderForm_Enter(object sender, EventArgs e)
+        private void OrderForm_VisibleChanged(object sender, EventArgs e)
         {
-            GetPrice();
-            label1.Text = totalPrice.ToString();
+            ShowOrder();
+            label1.Text = Order.totalPrice.ToString();
+
 
         }
     }

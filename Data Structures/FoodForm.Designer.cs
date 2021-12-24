@@ -50,6 +50,7 @@
             this.Name = "FoodForm";
             this.Text = "FoodForm";
             this.Load += new System.EventHandler(this.FoodForm_Load);
+            this.VisibleChanged += new System.EventHandler(this.FoodForm_VisibleChanged);
             this.ResumeLayout(false);
 
         }

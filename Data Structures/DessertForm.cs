@@ -17,14 +17,17 @@ namespace Data_Structures
 
         public static DynamicArray<Dessert> dessertList = new DynamicArray<Dessert>();
         private bool IsShown = false;
+        int shown = 0;
         public DessertForm()
         {
             InitializeComponent();
         }
         private void ShowDessert()
         {
-            foreach (Dessert dessert in dessertList)
+            for (int i = shown; i < dessertList.Count; i++)
             {
+                Dessert dessert = dessertList[i];
+
                 Panel panel = new Panel();
                 panel.Margin = new System.Windows.Forms.Padding(10, 10, 20, 20);
                 panel.Size = new System.Drawing.Size(240, 205);
@@ -42,19 +45,18 @@ namespace Data_Structures
 
 
                 PictureBox picture = new PictureBox();
-
                 picture.Dock = DockStyle.Fill;
                 picture.BackColor = Color.White;
                 picture.LoadAsync(dessert.dessertPic);
                 picture.SizeMode = PictureBoxSizeMode.StretchImage;
                 picture.Click += new System.EventHandler(Dessert_Click);
 
-
                 panel.Controls.Add(dessertName);
                 panel.Controls.Add(picture);
 
 
                 flowLayoutPanel1.Controls.Add(panel);
+                shown = i + 1;
             }
         }
 
@@ -133,6 +135,11 @@ namespace Data_Structures
             string pictureURL = dessertList[index].dessertPic;
             BuyForm buyForm = new BuyForm(name, type, price, pictureURL);
             buyForm.Show();
+        }
+
+        private void DessertForm_VisibleChanged(object sender, EventArgs e)
+        {
+            ShowDessert();
         }
     }
     public class Dessert

@@ -15,6 +15,7 @@ namespace Data_Structures
     {
         public static DynamicArray<Food> foodList = new DynamicArray<Food>();
         private bool IsShown = false;
+        private int shown = 0;
         public FoodForm()
         {
             InitializeComponent();
@@ -22,12 +23,14 @@ namespace Data_Structures
         }
         private void ShowFood()
         {
-            foreach (Food food in foodList)
+            for (int i = shown; i < foodList.Count; i++)
             {
+                Food food = foodList[i];
+
                 Panel panel = new Panel();
                 panel.Margin = new System.Windows.Forms.Padding(10, 10, 20, 20);
                 panel.Size = new System.Drawing.Size(240, 205);
-                
+
 
                 Label foodName = new Label();
                 foodName.Size = new Size(240, 29);
@@ -52,6 +55,7 @@ namespace Data_Structures
 
 
                 flowLayoutPanel1.Controls.Add(panel);
+                shown = i + 1;
             }
         }
 
@@ -132,6 +136,11 @@ namespace Data_Structures
             string pictureURL = foodList[index].foodPic;
             BuyForm buyForm = new BuyForm(name,type,price , pictureURL);
             buyForm.Show();
+        }
+
+        private void FoodForm_VisibleChanged(object sender, EventArgs e)
+        {
+            ShowFood();
         }
     }
     public class Food

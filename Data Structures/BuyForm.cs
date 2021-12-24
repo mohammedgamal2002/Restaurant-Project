@@ -47,7 +47,6 @@ namespace Data_Structures
 
         private void Buy_Click(object sender, EventArgs e)
         {
-            MainForm.orderForm.Update();
             OrderForm order = new OrderForm(name, price, type, pictureURL);
 
             this.Close();

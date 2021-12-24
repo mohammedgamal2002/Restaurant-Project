@@ -49,20 +49,17 @@ namespace Data_Structures
                     {
                         FoodForm.AddFood(nameTextBox.Text, descriptionTextBox.Text, (int.Parse(priceTextBox.Text)), img);
                         MessageBox.Show("Added!");
-                        MainForm.foodForm.Update();
                     }
                     else if (Type == "Drinks")
                     {
                         DrinksForm.AddDrinks(nameTextBox.Text, descriptionTextBox.Text, (int.Parse(priceTextBox.Text)), img);
                         MessageBox.Show("Added!");
-                        MainForm.drinksForm.Update();
                     }
 
                     else if (Type == "Desserts")
                     {
                         DessertForm.AddDessert(nameTextBox.Text, descriptionTextBox.Text, (int.Parse(priceTextBox.Text)), img);
                         MessageBox.Show("Added!");
-                        MainForm.dessertForm.Update();
                     }
                     else
                         MessageBox.Show("Choose a type");
