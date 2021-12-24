@@ -51,23 +51,76 @@ namespace Data_Structures
 
         }
 
-        private void textBox2_Click(object sender, EventArgs e)
-        {
-            OpenFileDialog ofd = new OpenFileDialog();
-            if (ofd.ShowDialog() == DialogResult.OK)
-            {
-               img = ofd.FileName;
-               imgTextBox.Text = img;
-
-
-            }
-        }
+        //private void textBox2_Click(object sender, EventArgs e)
+        //{
+        //    OpenFileDialog ofd = new OpenFileDialog();
+        //    if (ofd.ShowDialog() == DialogResult.OK)
+        //    {
+        //       img = ofd.FileName;
+        //    }
+        //}
 
         private void SaveButton_Click(object sender, EventArgs e)
         {
             FoodForm.SaveFoodMenu();
             DrinksForm.SaveDrinksMenu();
             DessertForm.SaveDessertMenu();
+        }
+
+        private void nameTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void priceTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void imgTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void imgTextBox_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog ofd = new OpenFileDialog();
+            if (ofd.ShowDialog() == DialogResult.OK)
+            {
+                img = ofd.FileName;
+                newimage.LoadAsync(img);
+            }
+
+        }
+
+        private void iconPictureBox2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void menuType_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
