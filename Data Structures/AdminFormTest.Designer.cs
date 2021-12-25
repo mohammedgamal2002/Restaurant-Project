@@ -202,7 +202,7 @@
             // 
             // newImage
             // 
-            this.newImage.BackColor = System.Drawing.Color.AliceBlue;
+            this.newImage.BackColor = System.Drawing.Color.White;
             this.newImage.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.newImage.Location = new System.Drawing.Point(108, 6);
             this.newImage.Name = "newImage";
