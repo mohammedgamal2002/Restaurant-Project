@@ -64,7 +64,16 @@ namespace Data_Structures
             int index = label.Parent.TabIndex;
 
             string link = foodList[index].link;
-            System.Diagnostics.Process.Start(link);
+            try
+            {
+                System.Diagnostics.Process.Start(link);
+
+            }
+            catch (System.ComponentModel.Win32Exception)
+            {
+
+                MessageBox.Show("Error: Cannot open this URL.");
+            }
 
         }
 

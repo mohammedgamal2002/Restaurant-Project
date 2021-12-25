@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.loginPanel = new System.Windows.Forms.Panel();
+            this.passwordError = new System.Windows.Forms.Label();
+            this.userNameError = new System.Windows.Forms.Label();
             this.passwordIcon = new FontAwesome.Sharp.IconPictureBox();
             this.userIcon = new FontAwesome.Sharp.IconPictureBox();
             this.passwordTextBox = new System.Windows.Forms.TextBox();
@@ -46,6 +48,8 @@
             this.loginPanel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.loginPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
             this.loginPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.loginPanel.Controls.Add(this.passwordError);
+            this.loginPanel.Controls.Add(this.userNameError);
             this.loginPanel.Controls.Add(this.passwordIcon);
             this.loginPanel.Controls.Add(this.userIcon);
             this.loginPanel.Controls.Add(this.passwordTextBox);
@@ -56,6 +60,30 @@
             this.loginPanel.Name = "loginPanel";
             this.loginPanel.Size = new System.Drawing.Size(257, 334);
             this.loginPanel.TabIndex = 0;
+            // 
+            // passwordError
+            // 
+            this.passwordError.AutoSize = true;
+            this.passwordError.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.passwordError.ForeColor = System.Drawing.Color.Red;
+            this.passwordError.Location = new System.Drawing.Point(221, 142);
+            this.passwordError.Name = "passwordError";
+            this.passwordError.Size = new System.Drawing.Size(25, 31);
+            this.passwordError.TabIndex = 8;
+            this.passwordError.Text = "*";
+            this.passwordError.Visible = false;
+            // 
+            // userNameError
+            // 
+            this.userNameError.AutoSize = true;
+            this.userNameError.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.userNameError.ForeColor = System.Drawing.Color.Red;
+            this.userNameError.Location = new System.Drawing.Point(221, 84);
+            this.userNameError.Name = "userNameError";
+            this.userNameError.Size = new System.Drawing.Size(25, 31);
+            this.userNameError.TabIndex = 7;
+            this.userNameError.Text = "*";
+            this.userNameError.Visible = false;
             // 
             // passwordIcon
             // 
@@ -93,6 +121,7 @@
             this.passwordTextBox.Size = new System.Drawing.Size(141, 20);
             this.passwordTextBox.TabIndex = 2;
             this.passwordTextBox.Enter += new System.EventHandler(this.passwordTextBox_Enter);
+            this.passwordTextBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Login_Enter);
             this.passwordTextBox.Leave += new System.EventHandler(this.passwordTextBox_Leave);
             // 
             // usernameTextBox
@@ -102,6 +131,7 @@
             this.usernameTextBox.Size = new System.Drawing.Size(141, 20);
             this.usernameTextBox.TabIndex = 1;
             this.usernameTextBox.Enter += new System.EventHandler(this.usernameTextBox_Enter);
+            this.usernameTextBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Login_Enter);
             this.usernameTextBox.Leave += new System.EventHandler(this.usernameTextBox_Leave);
             // 
             // panel2
@@ -137,6 +167,9 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(173)))), ((int)(((byte)(63)))));
             this.ClientSize = new System.Drawing.Size(353, 424);
             this.Controls.Add(this.loginPanel);
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(369, 463);
+            this.MinimumSize = new System.Drawing.Size(369, 463);
             this.Name = "LoginForm";
             this.Text = "Login";
             this.loginPanel.ResumeLayout(false);
@@ -157,5 +190,7 @@
         private System.Windows.Forms.Button loginButton;
         private FontAwesome.Sharp.IconPictureBox passwordIcon;
         private FontAwesome.Sharp.IconPictureBox userIcon;
+        private System.Windows.Forms.Label passwordError;
+        private System.Windows.Forms.Label userNameError;
     }
 }

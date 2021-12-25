@@ -16,18 +16,31 @@ namespace Data_Structures
         {
             InitializeComponent();
         }
-
-        private void loginButton_Click(object sender, EventArgs e)
-        {
+        private void Login() {
             if (usernameTextBox.Text == "admin")
             {
+                userNameError.Visible = false;
+
                 if (passwordTextBox.Text == "admin")
                 {
-                    AdminForm admin = new AdminForm();
+                    passwordError.Visible = false;
+
+                    AdminFormTest admin = new AdminFormTest();
                     admin.Show();
                     this.Close();
                 }
+
+                else
+                    passwordError.Visible = true;
+
             }
+            else
+                userNameError.Visible = true;
+
+        }
+        private void loginButton_Click(object sender, EventArgs e)
+        {
+            Login();
         }
         private void usernameTextBox_Enter(object sender, EventArgs e)
         {
@@ -66,6 +79,16 @@ namespace Data_Structures
             loginPanel.BackColor = Color.FromArgb(230, 173, 30);
             loginButton.BackColor = Color.FromArgb(54, 53, 50);
             loginButton.ForeColor = Color.White;
+        }
+
+
+
+        private void Login_Enter(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                Login();
+            }
         }
     }
 }

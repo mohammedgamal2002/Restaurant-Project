@@ -137,7 +137,6 @@
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "BuyForm";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "BuyForm";
             this.Load += new System.EventHandler(this.BuyForm_Load);
             this.panel1.ResumeLayout(false);

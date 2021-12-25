@@ -14,6 +14,7 @@ namespace Data_Structures
     {
         public static DynamicArray<Order> orderList = new DynamicArray<Order>();
         private int shown = 0;
+        private int deliveryTime = 10;
         public OrderForm()
         {
             InitializeComponent();
@@ -76,6 +77,8 @@ namespace Data_Structures
         private void orderForm_Load(object sender, EventArgs e)
         {
             ShowOrder();
+            deliveringTimer.Interval = deliveryTime;
+            deliveringTimer.Start();
 
         }
 
@@ -108,6 +111,17 @@ namespace Data_Structures
             ShowOrder();
             label1.Text = Order.totalPrice.ToString();
 
+
+        }
+
+        private void deliveringTimer_Tick(object sender, EventArgs e)
+        {
+            int deliveryIcon_X = deliveryIcon.Location.X;
+            if (deliveryIcon_X >= delieveryPanel.Width)
+            {
+                deliveryIcon_X = 0;
+            }
+            deliveryIcon.Location = new Point(++deliveryIcon_X, deliveryIcon.Location.Y);
 
         }
     }
