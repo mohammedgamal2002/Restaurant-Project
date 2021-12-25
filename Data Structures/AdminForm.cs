@@ -47,18 +47,18 @@ namespace Data_Structures
                 {
                     if (Type == "Food")
                     {
-                        FoodForm.AddFood(nameTextBox.Text, descriptionTextBox.Text, (int.Parse(priceTextBox.Text)), img);
+                        FoodForm.AddFood(nameTextBox.Text, descriptionTextBox.Text, (int.Parse(priceTextBox.Text)), img , linkTextBox.Text);
                         MessageBox.Show("Added!");
                     }
                     else if (Type == "Drinks")
                     {
-                        DrinksForm.AddDrinks(nameTextBox.Text, descriptionTextBox.Text, (int.Parse(priceTextBox.Text)), img);
+                        DrinksForm.AddDrinks(nameTextBox.Text, descriptionTextBox.Text, (int.Parse(priceTextBox.Text)), img , linkTextBox.Text);
                         MessageBox.Show("Added!");
                     }
 
                     else if (Type == "Desserts")
                     {
-                        DessertForm.AddDessert(nameTextBox.Text, descriptionTextBox.Text, (int.Parse(priceTextBox.Text)), img);
+                        DessertForm.AddDessert(nameTextBox.Text, descriptionTextBox.Text, (int.Parse(priceTextBox.Text)), img, linkTextBox.Text);
                         MessageBox.Show("Added!");
                     }
                     else

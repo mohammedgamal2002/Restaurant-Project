@@ -31,7 +31,6 @@ namespace Data_Structures
                 panel.Margin = new System.Windows.Forms.Padding(10, 10, 20, 20);
                 panel.Size = new System.Drawing.Size(240, 205);
 
-
                 Label foodName = new Label();
                 foodName.Size = new Size(240, 29);
                 foodName.Dock = DockStyle.Bottom;
@@ -41,7 +40,7 @@ namespace Data_Structures
                 foodName.Font = new System.Drawing.Font("Monotype Corsiva", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
                 foodName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
                 foodName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-
+                foodName.Click += new System.EventHandler(this.FoodLink_Click);
 
                 PictureBox picture = new PictureBox();
                 picture.Dock = DockStyle.Fill;
@@ -59,6 +58,15 @@ namespace Data_Structures
             }
         }
 
+        private void FoodLink_Click(object sender, EventArgs e)
+        {
+            var label = sender as Label;
+            int index = label.Parent.TabIndex;
+
+            string link = foodList[index].link;
+            System.Diagnostics.Process.Start(link);
+
+        }
 
         public static void SaveFoodMenu()
         {
@@ -70,6 +78,7 @@ namespace Data_Structures
                     MenuWriter.WriteLine(food.foodType);
                     MenuWriter.WriteLine(food.foodPrice);
                     MenuWriter.WriteLine(food.foodPic);
+                    MenuWriter.WriteLine(food.link);
                     
                 }
             }
@@ -85,14 +94,17 @@ namespace Data_Structures
                     string foodType;
                     int price;
                     string foodPic;
+                    string link;
+
                     foodName = MenuReader.ReadLine();
                     while (foodName != null)
                     {
                         foodType = MenuReader.ReadLine();
                         price = int.Parse(MenuReader.ReadLine());
                         foodPic = MenuReader.ReadLine();
+                        link = MenuReader.ReadLine();
 
-                        foodList.Add(new Food(foodName, foodType, price, foodPic));
+                        foodList.Add(new Food(foodName, foodType, price, foodPic , link));
 
                         foodName = MenuReader.ReadLine();
 
@@ -110,8 +122,8 @@ namespace Data_Structures
 
         }
 
-        public static void AddFood(string name , string type , int price , string foodPic) {
-            foodList.Add(new Food(name, type, price, foodPic));
+        public static void AddFood(string name , string type , int price , string foodPic , string link) {
+            foodList.Add(new Food(name, type, price, foodPic, link));
 
         }
 
@@ -134,7 +146,8 @@ namespace Data_Structures
             string type = foodList[index].foodType;
             int price = foodList[index].foodPrice;
             string pictureURL = foodList[index].foodPic;
-            BuyForm buyForm = new BuyForm(name,type,price , pictureURL);
+            string link = foodList[index].link;
+            BuyForm buyForm = new BuyForm(name,type,price , pictureURL, link);
             buyForm.Show();
         }
 
@@ -149,12 +162,14 @@ namespace Data_Structures
         public string foodType { get; set; }
         public int foodPrice { get; set; }
         public string foodPic;
-        public Food(string foodName, string foodType, int foodPrice, string foodPic)
+        public string link;
+        public Food(string foodName, string foodType, int foodPrice, string foodPic, string link)
         {
             this.foodName = foodName;
             this.foodType = foodType;
             this.foodPrice = foodPrice;
             this.foodPic = foodPic;
+            this.link = link;
         }
     }
 }

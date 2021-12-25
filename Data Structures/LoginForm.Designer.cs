@@ -51,7 +51,8 @@
             this.loginPanel.Controls.Add(this.passwordTextBox);
             this.loginPanel.Controls.Add(this.usernameTextBox);
             this.loginPanel.Controls.Add(this.panel2);
-            this.loginPanel.Location = new System.Drawing.Point(40, 44);
+            this.loginPanel.Location = new System.Drawing.Point(45, 49);
+            this.loginPanel.Margin = new System.Windows.Forms.Padding(10);
             this.loginPanel.Name = "loginPanel";
             this.loginPanel.Size = new System.Drawing.Size(257, 334);
             this.loginPanel.TabIndex = 0;

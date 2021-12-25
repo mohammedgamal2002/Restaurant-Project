@@ -41,8 +41,7 @@ namespace Data_Structures
                 drinkName.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
                 drinkName.Font = new System.Drawing.Font("Monotype Corsiva", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
                 drinkName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-                drinkName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-
+                drinkName.Click += new System.EventHandler(DrinkLink_Click);
 
                 PictureBox picture = new PictureBox();
                 picture.Dock = DockStyle.Fill;
@@ -60,6 +59,15 @@ namespace Data_Structures
             }
         }
 
+        private void DrinkLink_Click(object sender, EventArgs e)
+        {
+            var label = sender as Label;
+            int index = label.Parent.TabIndex;
+
+            string link = drinksList[index].link;
+            System.Diagnostics.Process.Start(link);
+        }
+
         private void drinks_Click(object sender, EventArgs e)
         {
             PictureBox picture = sender as PictureBox;
@@ -68,7 +76,8 @@ namespace Data_Structures
             string type = drinksList[index].drinksType;
             int price = drinksList[index].drinksPrice;
             string pictureURL = drinksList[index].drinksPic;
-            BuyForm buyForm = new BuyForm(name, type, price, pictureURL);
+            string link = drinksList[index].link;
+            BuyForm buyForm = new BuyForm(name, type, price, pictureURL, link);
             buyForm.Show();
         }
 
@@ -82,6 +91,7 @@ namespace Data_Structures
                     MenuWriter.WriteLine(drinks.drinksType);
                     MenuWriter.WriteLine(drinks.drinksPrice);
                     MenuWriter.WriteLine(drinks.drinksPic);
+                    MenuWriter.WriteLine(drinks.link);
                 }
             }
         }
@@ -95,14 +105,16 @@ namespace Data_Structures
                     string drinksType;
                     int price;
                     string drinksPic;
+                    string link;
                     drinksName = MenuReader.ReadLine();
                     while (drinksName != null)
                     {
                         drinksType = MenuReader.ReadLine();
                         price = int.Parse(MenuReader.ReadLine());
                         drinksPic = MenuReader.ReadLine();
+                        link = MenuReader.ReadLine();
 
-                        drinksList.Add(new Drinks(drinksName, drinksType, price, drinksPic));
+                        drinksList.Add(new Drinks(drinksName, drinksType, price, drinksPic, link));
 
                         drinksName = MenuReader.ReadLine();
 
@@ -116,9 +128,9 @@ namespace Data_Structures
             }
         }
 
-        public static void AddDrinks(string name, string type, int price ,string drinksPic)
+        public static void AddDrinks(string name, string type, int price ,string drinksPic , string link)
         {
-            drinksList.Add(new Drinks(name, type, price, drinksPic));
+            drinksList.Add(new Drinks(name, type, price, drinksPic,link));
 
 
         }
@@ -145,12 +157,16 @@ namespace Data_Structures
         public string drinksType { get; set; }
         public int drinksPrice { get; set; }
         public string drinksPic;
-        public Drinks(string drinksName, string drinksType, int drinksPrice , string drinksPic)
+        public string link;
+
+        public Drinks(string drinksName, string drinksType, int drinksPrice , string drinksPic, string link)
         {
             this.drinksName = drinksName;
             this.drinksType = drinksType;
             this.drinksPrice = drinksPrice;
             this.drinksPic = drinksPic;
+            this.link = link;
+
         }
     }
 }

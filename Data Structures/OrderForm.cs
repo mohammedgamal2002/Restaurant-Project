@@ -18,10 +18,10 @@ namespace Data_Structures
         {
             InitializeComponent();
         }
-        public OrderForm(string name,int price,string type,string picture)
+        public OrderForm(string name,int price,string type,string picture , string link)
         {
             InitializeComponent();
-            Order newOrder = new Order(name, price, type, picture);
+            Order newOrder = new Order(name, price, type, picture, link);
             orderList.Add(newOrder);
 
         }
@@ -46,7 +46,7 @@ namespace Data_Structures
                 orderName.Font = new System.Drawing.Font("Monotype Corsiva", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
                 orderName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
                 orderName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-
+                orderName.Click += new System.EventHandler(OrderLink_Click);
 
                 PictureBox picture = new PictureBox();
                 picture.Dock = DockStyle.Fill;
@@ -64,6 +64,15 @@ namespace Data_Structures
             }
         }
 
+        private void OrderLink_Click(object sender, EventArgs e)
+        {
+            var label = sender as Label;
+            int index = label.Parent.TabIndex;
+
+            string link = orderList[index].link;
+            System.Diagnostics.Process.Start(link);
+        }
+
         private void orderForm_Load(object sender, EventArgs e)
         {
             ShowOrder();
@@ -76,14 +85,17 @@ namespace Data_Structures
             public string orderType { get; set; }
             public int orderPrice { get; set; }
             public string orderPictureURL;
+            public string link;
+
             public static int totalPrice = 0;
 
-            public Order(string orderName,int orderprice, string orderType, string orderPictureURL)
+            public Order(string orderName,int orderprice, string orderType, string orderPictureURL , string link)
             {
                 this.orderName = orderName;
                 this.orderPrice = orderprice;
                 this.orderType = orderType;
                 this.orderPictureURL = orderPictureURL;
+                this.link = link;
                 totalPrice += orderprice;
             }
 

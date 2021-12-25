@@ -42,6 +42,7 @@ namespace Data_Structures
                 dessertName.Font = new System.Drawing.Font("Monotype Corsiva", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
                 dessertName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
                 dessertName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+                dessertName.Click += new System.EventHandler(DessertLink_Click);
 
 
                 PictureBox picture = new PictureBox();
@@ -60,6 +61,15 @@ namespace Data_Structures
             }
         }
 
+        private void DessertLink_Click(object sender, EventArgs e)
+        {
+            var label = sender as Label;
+            int index = label.Parent.TabIndex;
+
+            string link = dessertList[index].link;
+            System.Diagnostics.Process.Start(link);
+        }
+
         public static void SaveDessertMenu()
         {
             using (var MenuWriter = new StreamWriter("Dessert_Menu.txt", false))
@@ -70,6 +80,7 @@ namespace Data_Structures
                     MenuWriter.WriteLine(dessert.dessertType);
                     MenuWriter.WriteLine(dessert.dessertPrice);
                     MenuWriter.WriteLine(dessert.dessertPic);
+                    MenuWriter.WriteLine(dessert.link);
 
                 }
             }
@@ -85,14 +96,16 @@ namespace Data_Structures
                     string dessertType;
                     int price;
                     string dessertPic;
+                    string link;
                     dessertName = MenuReader.ReadLine();
                     while (dessertName != null)
                     {
                         dessertType = MenuReader.ReadLine();
                         price = int.Parse(MenuReader.ReadLine());
                         dessertPic = MenuReader.ReadLine();
+                        link = MenuReader.ReadLine();
 
-                        dessertList.Add(new Dessert(dessertName, dessertType, price, dessertPic));
+                        dessertList.Add(new Dessert(dessertName, dessertType, price, dessertPic,link));
 
                         dessertName = MenuReader.ReadLine();
 
@@ -109,9 +122,9 @@ namespace Data_Structures
 
         }
 
-        public static void AddDessert(string name, string type, int price, string dessertPic)
+        public static void AddDessert(string name, string type, int price, string dessertPic, string link)
         {
-            dessertList.Add(new Dessert(name, type, price, dessertPic));
+            dessertList.Add(new Dessert(name, type, price, dessertPic, link));
 
 
         }
@@ -133,7 +146,9 @@ namespace Data_Structures
             string type = dessertList[index].dessertType;
             int price = dessertList[index].dessertPrice;
             string pictureURL = dessertList[index].dessertPic;
-            BuyForm buyForm = new BuyForm(name, type, price, pictureURL);
+            string link = dessertList[index].link;
+
+            BuyForm buyForm = new BuyForm(name, type, price, pictureURL, link);
             buyForm.Show();
         }
 
@@ -148,12 +163,14 @@ namespace Data_Structures
         public string dessertType { get; set; }
         public int dessertPrice { get; set; }
         public string dessertPic;
-        public Dessert(string dessertName, string dessertType, int dessertPrice, string dessertPic)
+        public string link;
+        public Dessert(string dessertName, string dessertType, int dessertPrice, string dessertPic, string link)
         {
             this.dessertName = dessertName;
             this.dessertType = dessertType;
             this.dessertPrice = dessertPrice;
             this.dessertPic = dessertPic;
+            this.link = link;
         }
     }
 }
