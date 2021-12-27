@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.iconButton5 = new FontAwesome.Sharp.IconButton();
             this.drinksFormButton = new FontAwesome.Sharp.IconButton();
             this.dessertMenu = new FontAwesome.Sharp.IconButton();
             this.FoodMenu = new FontAwesome.Sharp.IconButton();
@@ -46,7 +45,6 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(49)))), ((int)(((byte)(56)))));
-            this.panel1.Controls.Add(this.iconButton5);
             this.panel1.Controls.Add(this.drinksFormButton);
             this.panel1.Controls.Add(this.dessertMenu);
             this.panel1.Controls.Add(this.FoodMenu);
@@ -57,26 +55,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(119, 450);
             this.panel1.TabIndex = 0;
-            // 
-            // iconButton5
-            // 
-            this.iconButton5.BackColor = System.Drawing.Color.Black;
-            this.iconButton5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.iconButton5.FlatAppearance.BorderSize = 0;
-            this.iconButton5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(123)))), ((int)(((byte)(2)))));
-            this.iconButton5.IconChar = FontAwesome.Sharp.IconChar.Neuter;
-            this.iconButton5.IconColor = System.Drawing.Color.WhiteSmoke;
-            this.iconButton5.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton5.IconSize = 33;
-            this.iconButton5.Location = new System.Drawing.Point(0, 304);
-            this.iconButton5.Name = "iconButton5";
-            this.iconButton5.Size = new System.Drawing.Size(119, 53);
-            this.iconButton5.TabIndex = 4;
-            this.iconButton5.Text = "iconButton5";
-            this.iconButton5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconButton5.UseVisualStyleBackColor = false;
-            this.iconButton5.Click += new System.EventHandler(this.iconButton_Click);
             // 
             // drinksFormButton
             // 
@@ -227,7 +205,6 @@
         private FontAwesome.Sharp.IconButton ordersButton;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel shadowPanel1;
-        private FontAwesome.Sharp.IconButton iconButton5;
         private FontAwesome.Sharp.IconButton drinksFormButton;
         private FontAwesome.Sharp.IconButton dessertMenu;
         private FontAwesome.Sharp.IconButton FoodMenu;
