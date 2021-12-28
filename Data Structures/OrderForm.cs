@@ -36,6 +36,7 @@ namespace Data_Structures
                 Panel panel = new Panel();
                 panel.Margin = new System.Windows.Forms.Padding(10, 10, 20, 20);
                 panel.Size = new System.Drawing.Size(240, 205);
+                panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
 
 
                 Label orderName = new Label();
@@ -44,9 +45,9 @@ namespace Data_Structures
                 orderName.ForeColor = Color.FromArgb(214, 155, 15);
                 orderName.Text = order.orderName;
                 orderName.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-                orderName.Font = new System.Drawing.Font("Monotype Corsiva", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+                orderName.Font = new System.Drawing.Font("Monotype Corsiva", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
                 orderName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-                orderName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+                orderName.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
                 orderName.Click += new System.EventHandler(OrderLink_Click);
 
                 PictureBox picture = new PictureBox();
@@ -54,7 +55,6 @@ namespace Data_Structures
                 picture.BackColor = Color.White;
                 picture.LoadAsync(order.orderPictureURL);
                 picture.SizeMode = PictureBoxSizeMode.StretchImage;
-                //picture.Click += new System.EventHandler(Food_Click);
 
                 panel.Controls.Add(orderName);
                 panel.Controls.Add(picture);
@@ -79,7 +79,6 @@ namespace Data_Structures
             ShowOrder();
             deliveringTimer.Interval = deliveryTime;
             deliveringTimer.Start();
-
         }
 
         public class Order

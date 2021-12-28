@@ -64,7 +64,7 @@
             // 
             // button2
             // 
-            this.button2.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.button2.BackColor = System.Drawing.Color.White;
             this.button2.Dock = System.Windows.Forms.DockStyle.Left;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -79,7 +79,7 @@
             // 
             // Buy
             // 
-            this.Buy.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.Buy.BackColor = System.Drawing.Color.White;
             this.Buy.Dock = System.Windows.Forms.DockStyle.Left;
             this.Buy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Buy.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -94,7 +94,7 @@
             // 
             // priceLabel
             // 
-            this.priceLabel.BackColor = System.Drawing.Color.LightGray;
+            this.priceLabel.BackColor = System.Drawing.Color.White;
             this.priceLabel.Dock = System.Windows.Forms.DockStyle.Top;
             this.priceLabel.Font = new System.Drawing.Font("Microsoft JhengHei Light", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.priceLabel.Location = new System.Drawing.Point(0, 100);
@@ -106,7 +106,7 @@
             // 
             // typeLabel
             // 
-            this.typeLabel.BackColor = System.Drawing.Color.LightGray;
+            this.typeLabel.BackColor = System.Drawing.Color.White;
             this.typeLabel.Dock = System.Windows.Forms.DockStyle.Top;
             this.typeLabel.Font = new System.Drawing.Font("Microsoft JhengHei Light", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.typeLabel.Location = new System.Drawing.Point(0, 50);
@@ -118,7 +118,7 @@
             // 
             // nameLabel
             // 
-            this.nameLabel.BackColor = System.Drawing.Color.LightGray;
+            this.nameLabel.BackColor = System.Drawing.Color.White;
             this.nameLabel.Dock = System.Windows.Forms.DockStyle.Top;
             this.nameLabel.Font = new System.Drawing.Font("Microsoft JhengHei Light", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nameLabel.Location = new System.Drawing.Point(0, 0);
@@ -132,7 +132,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Black;
+            this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(231, 294);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;

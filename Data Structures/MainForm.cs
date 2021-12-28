@@ -47,7 +47,7 @@ namespace Data_Structures
         {
             orderForm = new OrderForm();
             orderForm.TopLevel = false;
-            panel2.Controls.Add(orderForm);
+            childFormPanel.Controls.Add(orderForm);
             orderForm.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             orderForm.Dock = DockStyle.Fill;
 
@@ -66,7 +66,7 @@ namespace Data_Structures
         {
                 foodForm = new FoodForm();
                 foodForm.TopLevel = false;
-                panel2.Controls.Add(foodForm);
+                childFormPanel.Controls.Add(foodForm);
                 foodForm.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
                 foodForm.Dock = DockStyle.Fill;
 
@@ -85,7 +85,7 @@ namespace Data_Structures
         {
                 drinksForm = new DrinksForm();
                 drinksForm.TopLevel = false;
-                panel2.Controls.Add(drinksForm);
+                childFormPanel.Controls.Add(drinksForm);
                 drinksForm.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
                 drinksForm.Dock = DockStyle.Fill;
         }
@@ -103,12 +103,14 @@ namespace Data_Structures
         {
                 dessertForm = new DessertForm();
                 dessertForm.TopLevel = false;
-                panel2.Controls.Add(dessertForm);
+                childFormPanel.Controls.Add(dessertForm);
                 dessertForm.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
                 dessertForm.Dock = DockStyle.Fill;
 
 
         }
+
+
         private void HideDessertForm()
         {
 
@@ -164,13 +166,14 @@ namespace Data_Structures
 
                 }
                 StyleIcon(FoodMenu);
-                    UnStyleIcon(drinksFormButton);
-                    UnStyleIcon(dessertMenu);
-                    UnStyleIcon(ordersButton);
+                UnStyleIcon(drinksFormButton);
+                UnStyleIcon(dessertMenu);
+                UnStyleIcon(ordersButton);
 
 
             }
-            else if (iconButton.Text == "Drinks") {
+            else if (iconButton.Text == "Drinks")
+            {
 
                 if (DrinksMenuIsClosed)
                 {
@@ -197,7 +200,8 @@ namespace Data_Structures
 
             }
 
-            else if (iconButton.Text == "Desserts"){
+            else if (iconButton.Text == "Desserts")
+            {
                 if (DessertMenuIsClosed)
                 {
                     dessertForm.Show();
@@ -215,7 +219,9 @@ namespace Data_Structures
                 }
                 StyleIcon(dessertMenu);
                 UnStyleIcon(drinksFormButton);
-                UnStyleIcon(FoodMenu);                UnStyleIcon(ordersButton);
+                UnStyleIcon(FoodMenu);
+                UnStyleIcon(ordersButton);
+
 
 
             }
@@ -227,6 +233,7 @@ namespace Data_Structures
                     HideDrinksForm();
                     HideFoodForm();
                     HideDessertForm();
+
                     OrderFormIsClosed = false;
 
                 }
@@ -240,17 +247,16 @@ namespace Data_Structures
                 UnStyleIcon(FoodMenu);
                 UnStyleIcon(dessertMenu);
 
+
+
             }
+            
         }
 
-        private void Admin_Click(object sender, EventArgs e)
+        private void logoPictureBox_Click(object sender, EventArgs e)
         {
             LoginForm loginForm = new LoginForm();
             loginForm.Show();
-
         }
-
-
-
     }
 }

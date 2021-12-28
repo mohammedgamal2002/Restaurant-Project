@@ -31,6 +31,7 @@ namespace Data_Structures
                 Panel panel = new Panel();
                 panel.Margin = new System.Windows.Forms.Padding(10, 10, 20, 20);
                 panel.Size = new System.Drawing.Size(240, 205);
+                panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
 
 
                 Label dessertName = new Label();
@@ -39,9 +40,9 @@ namespace Data_Structures
                 dessertName.ForeColor = Color.FromArgb(214, 155, 15);
                 dessertName.Text = dessert.dessertName;
                 dessertName.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-                dessertName.Font = new System.Drawing.Font("Monotype Corsiva", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+                dessertName.Font = new System.Drawing.Font("Monotype Corsiva", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
                 dessertName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-                dessertName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+                dessertName.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
                 dessertName.Click += new System.EventHandler(DessertLink_Click);
 
 

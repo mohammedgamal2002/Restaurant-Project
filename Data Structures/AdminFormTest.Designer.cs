@@ -74,7 +74,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
+            this.panel1.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel1.Controls.Add(this.panel9);
             this.panel1.Controls.Add(this.panel5);
             this.panel1.Controls.Add(this.panel4);
@@ -134,7 +134,7 @@
             this.saveButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.saveButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(173)))), ((int)(((byte)(63)))));
             this.saveButton.IconChar = FontAwesome.Sharp.IconChar.Save;
-            this.saveButton.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(173)))), ((int)(((byte)(63)))));
+            this.saveButton.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(200)))), ((int)(((byte)(139)))));
             this.saveButton.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.saveButton.IconSize = 39;
             this.saveButton.Location = new System.Drawing.Point(138, 73);
@@ -165,7 +165,7 @@
             this.addButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.addButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(173)))), ((int)(((byte)(63)))));
             this.addButton.IconChar = FontAwesome.Sharp.IconChar.PlusCircle;
-            this.addButton.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(173)))), ((int)(((byte)(63)))));
+            this.addButton.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(200)))), ((int)(((byte)(139)))));
             this.addButton.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.addButton.IconSize = 39;
             this.addButton.Location = new System.Drawing.Point(67, 73);
@@ -214,10 +214,10 @@
             // 
             // imageIcon
             // 
-            this.imageIcon.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
-            this.imageIcon.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(173)))), ((int)(((byte)(63)))));
+            this.imageIcon.BackColor = System.Drawing.Color.Transparent;
+            this.imageIcon.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(200)))), ((int)(((byte)(139)))));
             this.imageIcon.IconChar = FontAwesome.Sharp.IconChar.Images;
-            this.imageIcon.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(173)))), ((int)(((byte)(63)))));
+            this.imageIcon.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(200)))), ((int)(((byte)(139)))));
             this.imageIcon.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.imageIcon.Location = new System.Drawing.Point(25, 11);
             this.imageIcon.Name = "imageIcon";
@@ -235,6 +235,7 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(277, 56);
             this.panel4.TabIndex = 6;
+            this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
             // 
             // linkError
             // 
@@ -257,10 +258,10 @@
             // 
             // linkIcon
             // 
-            this.linkIcon.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
-            this.linkIcon.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(173)))), ((int)(((byte)(63)))));
+            this.linkIcon.BackColor = System.Drawing.Color.Transparent;
+            this.linkIcon.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(200)))), ((int)(((byte)(139)))));
             this.linkIcon.IconChar = FontAwesome.Sharp.IconChar.Link;
-            this.linkIcon.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(173)))), ((int)(((byte)(63)))));
+            this.linkIcon.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(200)))), ((int)(((byte)(139)))));
             this.linkIcon.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.linkIcon.Location = new System.Drawing.Point(25, 11);
             this.linkIcon.Name = "linkIcon";
@@ -300,10 +301,10 @@
             // 
             // priceIcon
             // 
-            this.priceIcon.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
-            this.priceIcon.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(173)))), ((int)(((byte)(63)))));
+            this.priceIcon.BackColor = System.Drawing.Color.Transparent;
+            this.priceIcon.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(200)))), ((int)(((byte)(139)))));
             this.priceIcon.IconChar = FontAwesome.Sharp.IconChar.DollarSign;
-            this.priceIcon.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(173)))), ((int)(((byte)(63)))));
+            this.priceIcon.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(200)))), ((int)(((byte)(139)))));
             this.priceIcon.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.priceIcon.Location = new System.Drawing.Point(25, 11);
             this.priceIcon.Name = "priceIcon";
@@ -343,10 +344,10 @@
             // 
             // nameIcon
             // 
-            this.nameIcon.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
-            this.nameIcon.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(173)))), ((int)(((byte)(63)))));
+            this.nameIcon.BackColor = System.Drawing.Color.Transparent;
+            this.nameIcon.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(200)))), ((int)(((byte)(139)))));
             this.nameIcon.IconChar = FontAwesome.Sharp.IconChar.Tags;
-            this.nameIcon.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(173)))), ((int)(((byte)(63)))));
+            this.nameIcon.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(200)))), ((int)(((byte)(139)))));
             this.nameIcon.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.nameIcon.Location = new System.Drawing.Point(25, 11);
             this.nameIcon.Name = "nameIcon";
@@ -369,10 +370,10 @@
             // 
             // foodIcon
             // 
-            this.foodIcon.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
-            this.foodIcon.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(173)))), ((int)(((byte)(63)))));
+            this.foodIcon.BackColor = System.Drawing.Color.Transparent;
+            this.foodIcon.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(200)))), ((int)(((byte)(139)))));
             this.foodIcon.IconChar = FontAwesome.Sharp.IconChar.Utensils;
-            this.foodIcon.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(173)))), ((int)(((byte)(63)))));
+            this.foodIcon.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(200)))), ((int)(((byte)(139)))));
             this.foodIcon.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.foodIcon.Location = new System.Drawing.Point(70, 15);
             this.foodIcon.Margin = new System.Windows.Forms.Padding(10);
@@ -384,10 +385,10 @@
             // 
             // drinksIcon
             // 
-            this.drinksIcon.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
-            this.drinksIcon.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(173)))), ((int)(((byte)(63)))));
+            this.drinksIcon.BackColor = System.Drawing.Color.Transparent;
+            this.drinksIcon.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(200)))), ((int)(((byte)(139)))));
             this.drinksIcon.IconChar = FontAwesome.Sharp.IconChar.Coffee;
-            this.drinksIcon.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(173)))), ((int)(((byte)(63)))));
+            this.drinksIcon.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(200)))), ((int)(((byte)(139)))));
             this.drinksIcon.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.drinksIcon.Location = new System.Drawing.Point(122, 15);
             this.drinksIcon.Margin = new System.Windows.Forms.Padding(10);
@@ -399,10 +400,10 @@
             // 
             // dessertsIcon
             // 
-            this.dessertsIcon.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
-            this.dessertsIcon.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(173)))), ((int)(((byte)(63)))));
+            this.dessertsIcon.BackColor = System.Drawing.Color.Transparent;
+            this.dessertsIcon.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(200)))), ((int)(((byte)(139)))));
             this.dessertsIcon.IconChar = FontAwesome.Sharp.IconChar.CookieBite;
-            this.dessertsIcon.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(173)))), ((int)(((byte)(63)))));
+            this.dessertsIcon.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(200)))), ((int)(((byte)(139)))));
             this.dessertsIcon.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.dessertsIcon.Location = new System.Drawing.Point(174, 15);
             this.dessertsIcon.Margin = new System.Windows.Forms.Padding(10);
@@ -416,7 +417,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(173)))), ((int)(((byte)(63)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(240)))), ((int)(((byte)(222)))));
             this.ClientSize = new System.Drawing.Size(336, 494);
             this.Controls.Add(this.panel1);
             this.MaximizeBox = false;

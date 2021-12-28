@@ -31,6 +31,7 @@ namespace Data_Structures
                 Panel panel = new Panel();
                 panel.Margin = new System.Windows.Forms.Padding(10, 10, 20, 20);
                 panel.Size = new System.Drawing.Size(240, 205);
+                panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
 
 
                 Label drinkName = new Label();
@@ -39,9 +40,10 @@ namespace Data_Structures
                 drinkName.ForeColor = Color.FromArgb(214, 155, 15);
                 drinkName.Text = drink.drinksName;
                 drinkName.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-                drinkName.Font = new System.Drawing.Font("Monotype Corsiva", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+                drinkName.Font = new System.Drawing.Font("Monotype Corsiva", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
                 drinkName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
                 drinkName.Click += new System.EventHandler(DrinkLink_Click);
+                drinkName.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
 
                 PictureBox picture = new PictureBox();
                 picture.Dock = DockStyle.Fill;

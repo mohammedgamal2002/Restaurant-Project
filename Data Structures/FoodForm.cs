@@ -20,6 +20,7 @@ namespace Data_Structures
         {
             InitializeComponent();
 
+
         }
         private void ShowFood()
         {
@@ -30,24 +31,30 @@ namespace Data_Structures
                 Panel panel = new Panel();
                 panel.Margin = new System.Windows.Forms.Padding(10, 10, 20, 20);
                 panel.Size = new System.Drawing.Size(240, 205);
+                panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+
+
+
 
                 Label foodName = new Label();
                 foodName.Size = new Size(240, 29);
                 foodName.Dock = DockStyle.Bottom;
-                foodName.ForeColor = Color.FromArgb(214, 155, 15);
+                foodName.ForeColor = Color.FromArgb(232, 157, 17);
                 foodName.Text = food.foodName;
                 foodName.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-                foodName.Font = new System.Drawing.Font("Monotype Corsiva", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+                foodName.Font = new System.Drawing.Font("Monotype Corsiva", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
                 foodName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-                foodName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+                foodName.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
                 foodName.Click += new System.EventHandler(this.FoodLink_Click);
+
 
                 PictureBox picture = new PictureBox();
                 picture.Dock = DockStyle.Fill;
-                picture.BackColor = Color.White;
+                picture.BackColor = Color.Transparent;
                 picture.LoadAsync(food.foodPic);
                 picture.SizeMode = PictureBoxSizeMode.StretchImage;
                 picture.Click += new System.EventHandler(Food_Click);
+
 
                 panel.Controls.Add(foodName);
                 panel.Controls.Add(picture);
@@ -117,6 +124,7 @@ namespace Data_Structures
 
                         foodName = MenuReader.ReadLine();
 
+
                     }
 
                 }
@@ -146,6 +154,7 @@ namespace Data_Structures
             }
 
         }
+
 
         private void Food_Click(object sender, EventArgs e)
         {

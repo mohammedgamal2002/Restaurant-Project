@@ -118,16 +118,31 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="3295-1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\3295-1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="photo-1589010588553-46e8e7c21788" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\img\photo-1589010588553-46e8e7c21788.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="4869626-1431322447" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\4869626-1431322447.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Ram-256" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Ram-256.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="photo-1490818387583-1baba5e638af" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\img\photo-1490818387583-1baba5e638af.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="2019_6_17_19_29_26_907" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\2019_6_17_19_29_26_907.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Ram-256" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Ram-256.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="photo-1504674900247-0877df9cc836" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\img\photo-1504674900247-0877df9cc836.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="4869626-1431322447" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\4869626-1431322447.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="3295-1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\3295-1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="vintage-gc1986b21b_1920" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\img\vintage-gc1986b21b_1920.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cooking-g675e71e80_1280" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\img\cooking-g675e71e80_1280.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

@@ -75,10 +75,10 @@ namespace Data_Structures
 
         }
         private void ChangeBackColor() {
-            this.BackColor = Color.FromArgb(46, 45, 45);
-            loginPanel.BackColor = Color.FromArgb(230, 173, 30);
-            loginButton.BackColor = Color.FromArgb(54, 53, 50);
-            loginButton.ForeColor = Color.White;
+            this.BackColor = Color.WhiteSmoke;
+            loginPanel.BackColor = Color.FromArgb(255, 240, 222);
+            loginButton.BackColor = Color.WhiteSmoke;
+            loginButton.ForeColor = Color.Black;
         }
 
 

@@ -52,6 +52,7 @@ namespace Data_Structures
             OrderForm order = new OrderForm(name, price, type, pictureURL, link);
 
             this.Close();
+
         }
     }
 }

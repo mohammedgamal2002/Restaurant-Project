@@ -46,7 +46,7 @@
             // loginPanel
             // 
             this.loginPanel.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.loginPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
+            this.loginPanel.BackColor = System.Drawing.Color.WhiteSmoke;
             this.loginPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.loginPanel.Controls.Add(this.passwordError);
             this.loginPanel.Controls.Add(this.userNameError);
@@ -87,10 +87,10 @@
             // 
             // passwordIcon
             // 
-            this.passwordIcon.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
-            this.passwordIcon.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(163)))), ((int)(((byte)(120)))), ((int)(((byte)(8)))));
+            this.passwordIcon.BackColor = System.Drawing.Color.Transparent;
+            this.passwordIcon.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(200)))), ((int)(((byte)(139)))));
             this.passwordIcon.IconChar = FontAwesome.Sharp.IconChar.Lock;
-            this.passwordIcon.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(163)))), ((int)(((byte)(120)))), ((int)(((byte)(8)))));
+            this.passwordIcon.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(200)))), ((int)(((byte)(139)))));
             this.passwordIcon.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.passwordIcon.IconSize = 27;
             this.passwordIcon.Location = new System.Drawing.Point(17, 143);
@@ -101,10 +101,10 @@
             // 
             // userIcon
             // 
-            this.userIcon.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
-            this.userIcon.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(163)))), ((int)(((byte)(120)))), ((int)(((byte)(8)))));
+            this.userIcon.BackColor = System.Drawing.Color.Transparent;
+            this.userIcon.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(200)))), ((int)(((byte)(139)))));
             this.userIcon.IconChar = FontAwesome.Sharp.IconChar.User;
-            this.userIcon.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(163)))), ((int)(((byte)(120)))), ((int)(((byte)(8)))));
+            this.userIcon.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(200)))), ((int)(((byte)(139)))));
             this.userIcon.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.userIcon.IconSize = 27;
             this.userIcon.Location = new System.Drawing.Point(17, 85);
@@ -147,7 +147,7 @@
             // loginButton
             // 
             this.loginButton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.loginButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(173)))), ((int)(((byte)(63)))));
+            this.loginButton.BackColor = System.Drawing.Color.Bisque;
             this.loginButton.Dock = System.Windows.Forms.DockStyle.Fill;
             this.loginButton.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.loginButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -164,7 +164,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(173)))), ((int)(((byte)(63)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(240)))), ((int)(((byte)(222)))));
             this.ClientSize = new System.Drawing.Size(353, 424);
             this.Controls.Add(this.loginPanel);
             this.MaximizeBox = false;

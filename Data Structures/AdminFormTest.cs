@@ -23,27 +23,27 @@ namespace Data_Structures
         private void foodIcon_Click(object sender, EventArgs e)
         {
             Type = "Food";
-            foodIcon.IconColor = Color.Black;
-            drinksIcon.IconColor = Color.FromArgb(232, 173, 63);
-            dessertsIcon.IconColor = Color.FromArgb(232, 173, 63);
+            foodIcon.IconColor = Color.FromArgb(172, 173, 173);
+            drinksIcon.IconColor = Color.FromArgb(232, 200, 139);
+            dessertsIcon.IconColor = Color.FromArgb(232, 200, 139);
 
         }
 
         private void drinksIcon_Click(object sender, EventArgs e)
         {
             Type = "Drinks";
-            drinksIcon.IconColor = Color.Black;
-            foodIcon.IconColor = Color.FromArgb(232, 173, 63);
-            dessertsIcon.IconColor = Color.FromArgb(232, 173, 63);
+            drinksIcon.IconColor = Color.FromArgb(172, 173, 173);
+            foodIcon.IconColor = Color.FromArgb(232, 200, 139);
+            dessertsIcon.IconColor = Color.FromArgb(232, 200, 139);
 
         }
 
         private void dessertsIcon_Click(object sender, EventArgs e)
         {
             Type = "Desserts";
-            dessertsIcon.IconColor = Color.Black;
-            foodIcon.IconColor = Color.FromArgb(232, 173, 63);
-            drinksIcon.IconColor = Color.FromArgb(232, 173, 63);
+            dessertsIcon.IconColor = Color.FromArgb(172, 173, 173);
+            foodIcon.IconColor = Color.FromArgb(232, 200, 139);
+            drinksIcon.IconColor = Color.FromArgb(232, 200, 139);
         }
 
         private void addButton_Click(object sender, EventArgs e)
@@ -153,19 +153,24 @@ namespace Data_Structures
         {
             var iconBtn = sender as FontAwesome.Sharp.IconButton;
             iconBtn.IconColor = Color.FromArgb(46, 45, 45);
-            iconBtn.BackColor = Color.FromArgb(232, 173, 63);
+            iconBtn.BackColor = Color.FromArgb(232, 200, 139);
         }
 
         private void ButtonLeaveStyle(object sender, EventArgs e)
         {
             var iconBtn = sender as FontAwesome.Sharp.IconButton;
-            iconBtn.BackColor = Color.FromArgb(46, 45, 45);
+            iconBtn.BackColor = Color.Transparent;
             iconBtn.IconColor = Color.FromArgb(232, 173, 63);
         }
 
         private void descriptionTextBox_Click(object sender, EventArgs e)
         {
             descriptionTextBox.Text = "";
+        }
+
+        private void panel4_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
