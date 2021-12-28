@@ -153,27 +153,14 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\3295-1.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\2019_6_17_19_29_26_907.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\4869626-1431322447.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Ram-256.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="bin\Debug\img\photo-1490818387583-1baba5e638af.png" />
     <None Include="bin\Debug\img\photo-1504674900247-0877df9cc836.png" />
     <None Include="bin\Debug\img\photo-1589010588553-46e8e7c21788.png" />
     <None Include="bin\Debug\img\vintage-gc1986b21b_1920.jpg" />
     <None Include="bin\Debug\img\cooking-g675e71e80_1280.png" />
-    <Content Include="Resources\0e4729ff8c150b9bf6987cd0b25c9417.png" />
-    <Content Include="Resources\M2M-700x474.png" />
-    <Content Include="Resources\Milkshake-Choco.png" />
-    <Content Include="Resources\petite-midnightdelight.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\cooking-g675e71e80_1280.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
