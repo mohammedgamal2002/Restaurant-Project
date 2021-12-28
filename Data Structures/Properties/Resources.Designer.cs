@@ -63,89 +63,9 @@ namespace Data_Structures.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _2019_6_17_19_29_26_907 {
-            get {
-                object obj = ResourceManager.GetObject("2019_6_17_19_29_26_907", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap _3295_1 {
-            get {
-                object obj = ResourceManager.GetObject("3295-1", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap _4869626_1431322447 {
-            get {
-                object obj = ResourceManager.GetObject("4869626-1431322447", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap cooking_g675e71e80_1280 {
             get {
                 object obj = ResourceManager.GetObject("cooking-g675e71e80_1280", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap photo_1490818387583_1baba5e638af {
-            get {
-                object obj = ResourceManager.GetObject("photo-1490818387583-1baba5e638af", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap photo_1504674900247_0877df9cc836 {
-            get {
-                object obj = ResourceManager.GetObject("photo-1504674900247-0877df9cc836", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap photo_1589010588553_46e8e7c21788 {
-            get {
-                object obj = ResourceManager.GetObject("photo-1589010588553-46e8e7c21788", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Ram_256 {
-            get {
-                object obj = ResourceManager.GetObject("Ram-256", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap vintage_gc1986b21b_1920 {
-            get {
-                object obj = ResourceManager.GetObject("vintage-gc1986b21b_1920", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

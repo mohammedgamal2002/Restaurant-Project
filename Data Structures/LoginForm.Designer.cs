@@ -31,16 +31,16 @@
             this.loginPanel = new System.Windows.Forms.Panel();
             this.passwordError = new System.Windows.Forms.Label();
             this.userNameError = new System.Windows.Forms.Label();
-            this.passwordIcon = new FontAwesome.Sharp.IconPictureBox();
-            this.userIcon = new FontAwesome.Sharp.IconPictureBox();
             this.passwordTextBox = new System.Windows.Forms.TextBox();
             this.usernameTextBox = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.loginButton = new System.Windows.Forms.Button();
+            this.passwordIcon = new FontAwesome.Sharp.IconPictureBox();
+            this.userIcon = new FontAwesome.Sharp.IconPictureBox();
             this.loginPanel.SuspendLayout();
+            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.passwordIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.userIcon)).BeginInit();
-            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // loginPanel
@@ -85,34 +85,6 @@
             this.userNameError.Text = "*";
             this.userNameError.Visible = false;
             // 
-            // passwordIcon
-            // 
-            this.passwordIcon.BackColor = System.Drawing.Color.Transparent;
-            this.passwordIcon.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(200)))), ((int)(((byte)(139)))));
-            this.passwordIcon.IconChar = FontAwesome.Sharp.IconChar.Lock;
-            this.passwordIcon.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(200)))), ((int)(((byte)(139)))));
-            this.passwordIcon.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.passwordIcon.IconSize = 27;
-            this.passwordIcon.Location = new System.Drawing.Point(17, 143);
-            this.passwordIcon.Name = "passwordIcon";
-            this.passwordIcon.Size = new System.Drawing.Size(27, 30);
-            this.passwordIcon.TabIndex = 6;
-            this.passwordIcon.TabStop = false;
-            // 
-            // userIcon
-            // 
-            this.userIcon.BackColor = System.Drawing.Color.Transparent;
-            this.userIcon.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(200)))), ((int)(((byte)(139)))));
-            this.userIcon.IconChar = FontAwesome.Sharp.IconChar.User;
-            this.userIcon.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(200)))), ((int)(((byte)(139)))));
-            this.userIcon.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.userIcon.IconSize = 27;
-            this.userIcon.Location = new System.Drawing.Point(17, 85);
-            this.userIcon.Name = "userIcon";
-            this.userIcon.Size = new System.Drawing.Size(27, 30);
-            this.userIcon.TabIndex = 5;
-            this.userIcon.TabStop = false;
-            // 
             // passwordTextBox
             // 
             this.passwordTextBox.Location = new System.Drawing.Point(74, 153);
@@ -149,7 +121,8 @@
             this.loginButton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.loginButton.BackColor = System.Drawing.Color.Bisque;
             this.loginButton.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.loginButton.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.loginButton.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.loginButton.FlatAppearance.BorderSize = 0;
             this.loginButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.loginButton.ForeColor = System.Drawing.Color.Black;
             this.loginButton.Location = new System.Drawing.Point(0, 0);
@@ -159,6 +132,34 @@
             this.loginButton.Text = "Login";
             this.loginButton.UseVisualStyleBackColor = false;
             this.loginButton.Click += new System.EventHandler(this.loginButton_Click);
+            // 
+            // passwordIcon
+            // 
+            this.passwordIcon.BackColor = System.Drawing.Color.Transparent;
+            this.passwordIcon.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(200)))), ((int)(((byte)(139)))));
+            this.passwordIcon.IconChar = FontAwesome.Sharp.IconChar.Lock;
+            this.passwordIcon.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(200)))), ((int)(((byte)(139)))));
+            this.passwordIcon.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.passwordIcon.IconSize = 27;
+            this.passwordIcon.Location = new System.Drawing.Point(17, 143);
+            this.passwordIcon.Name = "passwordIcon";
+            this.passwordIcon.Size = new System.Drawing.Size(27, 30);
+            this.passwordIcon.TabIndex = 6;
+            this.passwordIcon.TabStop = false;
+            // 
+            // userIcon
+            // 
+            this.userIcon.BackColor = System.Drawing.Color.Transparent;
+            this.userIcon.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(200)))), ((int)(((byte)(139)))));
+            this.userIcon.IconChar = FontAwesome.Sharp.IconChar.User;
+            this.userIcon.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(200)))), ((int)(((byte)(139)))));
+            this.userIcon.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.userIcon.IconSize = 27;
+            this.userIcon.Location = new System.Drawing.Point(17, 85);
+            this.userIcon.Name = "userIcon";
+            this.userIcon.Size = new System.Drawing.Size(27, 30);
+            this.userIcon.TabIndex = 5;
+            this.userIcon.TabStop = false;
             // 
             // LoginForm
             // 
@@ -174,9 +175,9 @@
             this.Text = "Login";
             this.loginPanel.ResumeLayout(false);
             this.loginPanel.PerformLayout();
+            this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.passwordIcon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.userIcon)).EndInit();
-            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
