@@ -15,4 +15,8 @@ UI:
 
 ![](https://github.com/mohammedgamal2002/Restaurant-Project/blob/master/ResturantUI-Screenshots/DrinkMenu.png)
 
+![](https://github.com/mohammedgamal2002/Restaurant-Project/blob/master/ResturantUI-Screenshots/Orders(1).png)
+
+![](https://github.com/mohammedgamal2002/Restaurant-Project/blob/master/ResturantUI-Screenshots/Orders(2).png)
+
 
